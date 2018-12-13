@@ -3,6 +3,7 @@ package com.stu_manage.servlet;
 import com.stu_manage.model.Student;
 import com.stu_manage.service.IStuService;
 import com.stu_manage.service.impl.StuServiveImpl;
+import com.sun.org.glassfish.gmbal.Description;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,10 +15,12 @@ import java.sql.SQLException;
 
 @WebServlet(name = "ServletFindOneStu", urlPatterns = "/ServletFindOneStu")
 public class ServletFindOneStu extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             int sid = Integer.parseInt(request.getParameter("sid"));

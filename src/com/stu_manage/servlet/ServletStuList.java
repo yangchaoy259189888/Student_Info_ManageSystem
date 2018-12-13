@@ -15,10 +15,12 @@ import java.util.List;
 
 @WebServlet(name = "ServletStuList", urlPatterns = "/ServletStuList")
 public class ServletStuList extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             // 查询出所有学生

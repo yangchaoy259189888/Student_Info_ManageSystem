@@ -13,10 +13,12 @@ import java.sql.SQLException;
 
 @WebServlet(name = "ServletDelete", urlPatterns = "/ServletDelete")
 public class ServletDelete extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             // 接收要删除的学生id

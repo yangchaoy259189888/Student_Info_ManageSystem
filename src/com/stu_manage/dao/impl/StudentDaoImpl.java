@@ -2,7 +2,6 @@ package com.stu_manage.dao.impl;
 
 import com.stu_manage.dao.IStudentDao;
 import com.stu_manage.model.Student;
-import com.stu_manage.util.C3P0Util;
 import com.stu_manage.util.DruidUtil;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;

@@ -18,10 +18,12 @@ import java.util.Date;
 
 @WebServlet(name = "ServletAdd", urlPatterns = "/ServletAdd")
 public class ServletAdd extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             request.setCharacterEncoding("UTF-8");
@@ -36,8 +38,11 @@ public class ServletAdd extends HttpServlet {
             // 把birthday的string类型转化为Date类型
             Date date = new SimpleDateFormat("yyyy-mm-dd").parse(birthday);
             // hobbys为一个字符串数组，需要转化为string类型
-            String s = Arrays.toString(hobbys);             //[王者荣耀, 看电影, 游泳]
-            String hobby = s.substring(1, s.length()-1);    //王者荣耀, 看电影, 游泳
+
+            //[王者荣耀, 看电影, 游泳]
+            String s = Arrays.toString(hobbys);
+            //王者荣耀, 看电影, 游泳
+            String hobby = s.substring(1, s.length() - 1);
 
             Student student = new Student(sname, gender, phone, date, hobby, info);
             IStuService stuService = new StuServiveImpl();

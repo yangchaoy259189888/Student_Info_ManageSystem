@@ -14,10 +14,12 @@ import java.sql.SQLException;
 
 @WebServlet(name = "ServletStudentListPage", urlPatterns = "/ServletStudentListPage")
 public class ServletStudentListPage extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             //1. 获取需要显示的页码数
